@@ -11,11 +11,11 @@ var paths = {
 };
 
 gulp.task('sass', function() {
-  gulp.src(paths.sass)
+  return gulp.src(paths.sass)
   .pipe(sass())
   .pipe(gulp.dest(paths.cwd));
 });
-gulp.task('reloadcss', ['sass'], function() {
+gulp.task('reload', ['sass'], function() {
   reload({stream : true});
 });
 gulp.task('serve', function() {
@@ -26,7 +26,7 @@ gulp.task('serve', function() {
       styles: ['opacity: 0', 'position: absolute']
     }
   });
-  gulp.watch([paths.sass], ['reloadcss']);
+  gulp.watch([paths.sass], ['reload']);
   gulp.watch([paths.js, paths.php], function() {
     reload();
   });
