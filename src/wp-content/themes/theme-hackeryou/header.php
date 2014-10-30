@@ -16,7 +16,7 @@
 
 <body <?php body_class(); ?>>
 
-<header>
+<header class="header">
   <div class="container">
     <h1>
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
