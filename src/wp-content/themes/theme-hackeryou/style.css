@@ -647,14 +647,8 @@ p.form-allowed-tags, .nocomments {
   margin: 0; }
 
 .header {
-<<<<<<< HEAD
   background: blue;
-  top: 20px;
-}
+  top: 20px; }
 
 h1 {
-  margin: 0;
-}
-=======
-  background: blue; }
->>>>>>> 2d94fd49e5b8752124fff7fe10663aa81e69a1c1
+  margin: 0; }
