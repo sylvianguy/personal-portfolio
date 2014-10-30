@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/SeeThruHead/knwp/issues"
   },
-  "homepage": "https://github.com/SeeThruHead/knwp"
+  "homepage": "https://github.com/SeeThruHead/knwp",
+  "devDependencies": {
+    "browser-sync": "^1.6.2",
+    "gulp": "^3.8.9",
+    "gulp-sass": "^1.2.2"
+  }
 }
