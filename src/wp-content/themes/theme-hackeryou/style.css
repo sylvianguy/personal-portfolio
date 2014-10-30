@@ -796,4 +796,9 @@ p.form-allowed-tags, .nocomments {
 
 .header {
   background: blue;
+  top: 20px;
+}
+
+h1 {
+  margin: 0;
 }
