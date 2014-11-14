@@ -52,7 +52,7 @@ function hackeryou_scripts() {
   	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
   	false, //dependencies
   	null, //version number
-  	true //load in footer
+  	false //load in footer
   );
 
   wp_enqueue_script(
@@ -66,6 +66,14 @@ function hackeryou_scripts() {
   wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/scripts.js', //source
+    array( 'jquery', 'plugins' ), //dependencies
+    null, // version number
+    true //load in footer
+  );  
+
+  wp_enqueue_script(
+    'scrollReveal', //handle
+    get_template_directory_uri() . '/js/scrollReveal.min.js', //source
     array( 'jquery', 'plugins' ), //dependencies
     null, // version number
     true //load in footer
@@ -135,6 +143,8 @@ function hackeryou_auto_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'hackeryou_auto_excerpt_more' );
 
+
+    
 /**
  * Adds a pretty "Continue Reading" link to custom post excerpts.
  */
@@ -266,3 +276,15 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 ); 
+add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
+function remove_thumbnail_dimensions( $html ) { 
+$html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html ); return $html;
+}
+
+/**
+ * Remove the front-end admin bar for everybody, always
+ */
+show_admin_bar( false );
+

@@ -6,6 +6,8 @@
 
       <?php if ( have_posts() ) the_post(); ?>
 
+      <h2>WHERE IS THIS?!?!?!?</h2>
+
       <h1>
         <?php if ( is_day() ) : ?>
           Daily Archives: <?php the_date(); ?>

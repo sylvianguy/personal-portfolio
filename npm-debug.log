@@ -1,0 +1,29 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'uninstall',
+1 verbose cli   'browser-sync',
+1 verbose cli   '--save-dev' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose node_modules/browser-sync unbuild
+5 info preuninstall browser-sync@1.6.2
+6 info uninstall browser-sync@1.6.2
+7 verbose true,/Users/Sylvia/projects/knwp/node_modules,/Users/Sylvia/projects/knwp/node_modules unbuild browser-sync@1.6.2
+8 verbose /Users/Sylvia/projects/knwp/node_modules/.bin,[object Object] binRoot
+9 error Error: EACCES, unlink '/Users/Sylvia/projects/knwp/node_modules/.bin/browser-sync'
+9 error  { [Error: EACCES, unlink '/Users/Sylvia/projects/knwp/node_modules/.bin/browser-sync']
+9 error   errno: 3,
+9 error   code: 'EACCES',
+9 error   path: '/Users/Sylvia/projects/knwp/node_modules/.bin/browser-sync' }
+10 error Please try running this command again as root/Administrator.
+11 error System Darwin 14.0.0
+12 error command "node" "/usr/local/bin/npm" "uninstall" "browser-sync" "--save-dev"
+13 error cwd /Users/Sylvia/projects/knwp
+14 error node -v v0.10.32
+15 error npm -v 1.4.28
+16 error path /Users/Sylvia/projects/knwp/node_modules/.bin/browser-sync
+17 error code EACCES
+18 error errno 3
+19 error stack Error: EACCES, unlink '/Users/Sylvia/projects/knwp/node_modules/.bin/browser-sync'
+20 verbose exit [ 3, true ]

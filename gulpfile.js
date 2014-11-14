@@ -1,6 +1,4 @@
 var     gulp = require('gulp'),
- browserSync = require('browser-sync'),
-      reload = browserSync.reload,
         sass = require('gulp-sass');
 
 var paths = {
@@ -15,21 +13,8 @@ gulp.task('sass', function() {
   .pipe(sass())
   .pipe(gulp.dest(paths.cwd));
 });
-gulp.task('reload', ['sass'], function() {
-  reload({stream : true});
-});
 gulp.task('serve', function() {
-  browserSync({
-    proxy: "localhost:8888",
-    open: false,
-    notify: {
-      styles: ['opacity: 0', 'position: absolute']
-    }
-  });
-  gulp.watch([paths.sass], ['reload']);
-  gulp.watch([paths.js, paths.php], function() {
-    reload();
-  });
+  gulp.watch([paths.sass], ['sass']);
 });
 
 gulp.task('default', ['serve']);
